@@ -1,45 +1,45 @@
+//Accept number from user and off bit and return number
 #include<iostream>
 using namespace std;
 
 typedef unsigned int UINT;
 
-UINT ToogleBit(UINT iNo, UINT iPos)
+UINT ToggleBit(UINT iNo, UINT iPos)
 {
-    UINT iMask = 0X00000001;
-    UINT iResult = 0;
+  UINT iMask = 0X00000001;
+  UINT iResult = 0;
 
-    iMask = iMask << (iPos-1);
-    
-    iResult = iNo ^ iMask;
-    return iResult;
+  iMask = iMask<<(iPos - 1);
+
+  iResult = iNo ^ iMask;
+
+  return iResult;
+ 
 }
 
 int main()
 {
-    UINT iValue = 0;
-    UINT iBit = 0;
-    UINT iRet = 0;
+  UINT iValue = 0;
+  UINT iBit = 0;
+  UINT iRet = 0;
+  cout<<"Enter Number\n";
+  cin>>iValue;
 
-    cout<<"Enter number : "<<"\n";
-    cin>>iValue;
+  cout<<"Enter Position\n";
+  cin>>iBit;
 
-    cout<<"Enter the position : "<<"\n";
-    cin>>iBit;
+  iRet = ToggleBit(iValue,iBit);
+  cout<<"Result is : "<<iRet<<"\n";
 
-    iRet = ToogleBit(iValue,iBit);
-    cout<<"Result is : "<<iRet<<"\n";
+  return 0;
 
-    return 0;
 }
 
+
 /*
-
-    iPos = 7
-
-    iNo        0   0   1   1   0   1   0   0 
-               0   1   0   0   0   0   0   0        ^
------------------------------------------------------
-               0   0   1   1   0   1   0   0
+ipos = 7
+  0 1 1 1 0 1 0 0
+  0 1 0 0 0 0 0 0     ^XOR
+  --------------------
+  0 0 1 1 0 1 0 0
 */
-
-
