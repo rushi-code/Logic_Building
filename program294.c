@@ -139,7 +139,7 @@ int Count(PNODE Head, PNODE Tail)
     {
       return 0;
     }
-  return 0;
+  
 }
 
 void InsertAtPos(PPNODE Head, PPNODE Tail, int No, int iPos)

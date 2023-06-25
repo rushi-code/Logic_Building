@@ -143,7 +143,7 @@ int Count(PNODE Head, PNODE Tail)
     {
       return 0;
     }
-  return 0;
+  
 }
 
 
