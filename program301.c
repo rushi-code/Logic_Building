@@ -212,7 +212,7 @@ void DeleteAtPos(PPNODE Head, PPNODE Tail, int iPos)
   {
     DeleteFirst(Head,Tail);
   }
-  else if (iPos == iLength+1)
+  else if (iPos == iLength)
   {
     DeleteLast(Head,Tail);
 

@@ -149,7 +149,7 @@ void InsertAtPos(PPNODE Head, PPNODE Tail, int No, int iPos)
   int iLength  = 0;
   iLength = Count(*Head,*Tail);
 
-  if((iPos<1)||(iPos>iLength))
+  if((iPos<1)||(iPos>iLength+1))
   {
     printf("Invalid Position\n");
   }
@@ -158,7 +158,7 @@ void InsertAtPos(PPNODE Head, PPNODE Tail, int No, int iPos)
   {
     InsertFirst(Head,Tail,No);
   }
-  else if(iPos == iLength)
+  else if(iPos == iLength+1)
   {
     InsertLast(Head, Tail,No);
   }
@@ -187,7 +187,7 @@ void DeleteAtPos(PPNODE Head, PPNODE Tail, int iPos)
   int iLength  = 0;
   iLength = Count(*Head,*Tail);
 
-  if((iPos<1)||(iPos>iLength+1))
+  if((iPos<1)||(iPos>iLength))
   {
     printf("Invalid Position\n");
   }
@@ -196,7 +196,7 @@ void DeleteAtPos(PPNODE Head, PPNODE Tail, int iPos)
   {
     DeleteFirst(Head,Tail);
   }
-  else if(iPos == iLength+1)
+  else if(iPos == iLength)
   {
     DeleteLast(Head, Tail);
   }
