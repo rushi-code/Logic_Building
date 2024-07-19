@@ -14,7 +14,7 @@
 
 void DisplayClass(float fMarks)
 {
-    if((fMarks<0.00f) || (fMarks>100.00f))  // updater
+    if((fMarks<0.00f) || (fMarks>100.00f))  // Filter
     {
         printf("Invalid Input\n");
         printf("Please enter marks in between the range 0 to 100\n");
